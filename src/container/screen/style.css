@@ -1,0 +1,12 @@
+.header {
+  height: 80px;
+  width: auto;
+  background-color: rgba(32, 33, 31, 0.78);
+  color: white;
+}
+
+.body {
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
