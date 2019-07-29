@@ -1,0 +1,8 @@
+{
+  "str": { "shortName": "STR", "name": "Strength" },
+  "dex": { "shortName": "DEX", "name": "Dexterity" },
+  "con": { "shortName": "CON", "name": "Constitution" },
+  "int": { "shortName": "INT", "name": "Intelligence" },
+  "wis": { "shortName": "WIS", "name": "Wisdom" },
+  "cha": { "shortName": "CHA", "name": "Charisma" }
+}

@@ -1,0 +1,25 @@
+{
+  "acrobatics": {
+    "name": "Acrobatics",
+    "statMod": "dex",
+    "proficiency": "half",
+    "modifier": 2
+  },
+  "animalHandling": { "name": "Animal Handling", "statMod": "wis" },
+  "arcana": { "name": "Arcana", "statMod": "int" },
+  "athletics": { "name": "Athletics", "statMod": "str" },
+  "deception": { "name": "Deception", "statMod": "cha" },
+  "history": { "name": "History", "statMod": "int" },
+  "insight": { "name": "Insight", "statMod": "wis" },
+  "intimidation": { "name": "Intimidation", "statMod": "cha" },
+  "investigation": { "name": "Investigation", "statMod": "int" },
+  "medicine": { "name": "Medicine", "statMod": "wis" },
+  "nature": { "name": "Nature", "statMod": "int" },
+  "perception": { "name": "Perception", "statMod": "wis" },
+  "performance": { "name": "Performance", "statMod": "cha" },
+  "persuasion": { "name": "Persuasion", "statMod": "cha" },
+  "religion": { "name": "Religion", "statMod": "int" },
+  "sleightOfHand": { "name": "Sleight of Hand", "statMod": "dex" },
+  "stealth": { "name": "Stealth", "statMod": "dex" },
+  "survival": { "name": "Survival", "statMod": "wis" }
+}
