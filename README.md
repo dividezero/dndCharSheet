@@ -1,14 +1,6 @@
-# React Starter with ESlint, Prettier, Husky and Storybook
+# DND Character sheet
 
-Basically what it says on the box
-
--[x] React
--[x] Storybook
--[x] eslint
--[x] prettier configs
--[x] husky precommit linting
--[x] netlify single pager config
--[ ] dockerfile
+tbc
 
 
 ## Getting Started
