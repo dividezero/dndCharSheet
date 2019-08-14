@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Badge, Pane, Text } from 'evergreen-ui';
+import { Badge, Pane, Text, Tooltip } from 'evergreen-ui';
 import Card from '../Card';
 import Modifier from '../Modifier';
 
@@ -17,7 +17,11 @@ const SkillEntry = ({ skill }) => {
   return (
     <Pane display="table-row">
       <Text display="table-cell">
-        {badgeColor && <Badge color={badgeColor}>{profName[0]}</Badge>}
+        {badgeColor && (
+          <Tooltip content={profName}>
+            <Badge color={badgeColor}>{profName[0]}</Badge>
+          </Tooltip>
+        )}
       </Text>
       <Text display="table-cell">{statMod}</Text>
       <Text display="table-cell">{name}</Text>

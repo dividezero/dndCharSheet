@@ -5,22 +5,26 @@ import { Pane } from 'evergreen-ui';
 import { cellMargin, getCardWidth } from '../../theme/layout';
 
 // Declare a component that returns an HTML button with the given properties
-const Card = ({ cellWidth, cellHeight, children }) => (
-  <Pane
-    elevation={1}
-    float="left"
-    width={getCardWidth(cellWidth)}
-    height={getCardWidth(cellHeight)}
-    margin={cellMargin}
-    padding={20}
-    display="flex"
-    justifyContent="center"
-    alignItems="center"
-    flexDirection="column"
-  >
-    {children}
-  </Pane>
-);
+const Card = props => {
+  const { cellWidth, cellHeight, isRowDirection, children } = props;
+  return (
+    <Pane
+      elevation={1}
+      float="left"
+      width={getCardWidth(cellWidth)}
+      height={getCardWidth(cellHeight)}
+      margin={cellMargin}
+      padding={20}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection={isRowDirection ? 'row' : 'column'}
+      {...props}
+    >
+      {children}
+    </Pane>
+  );
+};
 
 // Description - appears in the storybook item
 Card.description = `
@@ -34,9 +38,12 @@ Card.propTypes = {
   cellWidth: PropTypes.string.isRequired,
   cellHeight: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired,
+  isRowDirection: PropTypes.bool,
 };
 
 // What properties the component should have when nothing is defined
-Card.defaultProps = {};
+Card.defaultProps = {
+  isRowDirection: false,
+};
 
 export default Card;

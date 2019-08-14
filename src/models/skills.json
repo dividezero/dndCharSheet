@@ -5,21 +5,106 @@
     "proficiency": "half",
     "modifier": 2
   },
-  "animalHandling": { "name": "Animal Handling", "statMod": "wis" },
-  "arcana": { "name": "Arcana", "statMod": "int" },
-  "athletics": { "name": "Athletics", "statMod": "str" },
-  "deception": { "name": "Deception", "statMod": "cha" },
-  "history": { "name": "History", "statMod": "int" },
-  "insight": { "name": "Insight", "statMod": "wis" },
-  "intimidation": { "name": "Intimidation", "statMod": "cha" },
-  "investigation": { "name": "Investigation", "statMod": "int" },
-  "medicine": { "name": "Medicine", "statMod": "wis" },
-  "nature": { "name": "Nature", "statMod": "int" },
-  "perception": { "name": "Perception", "statMod": "wis" },
-  "performance": { "name": "Performance", "statMod": "cha" },
-  "persuasion": { "name": "Persuasion", "statMod": "cha" },
-  "religion": { "name": "Religion", "statMod": "int" },
-  "sleightOfHand": { "name": "Sleight of Hand", "statMod": "dex" },
-  "stealth": { "name": "Stealth", "statMod": "dex" },
-  "survival": { "name": "Survival", "statMod": "wis" }
+  "animalHandling": {
+    "name": "Animal Handling",
+    "statMod": "wis",
+    "proficiency": "proficient",
+    "modifier": -2
+  },
+  "arcana": {
+    "name": "Arcana",
+    "statMod": "int",
+    "proficiency": "not",
+    "modifier": 2
+  },
+  "athletics": {
+    "name": "Athletics",
+    "statMod": "str",
+    "proficiency": "not",
+    "modifier": 2
+  },
+  "deception": {
+    "name": "Deception",
+    "statMod": "cha",
+    "proficiency": "not",
+    "modifier": 4
+  },
+  "history": {
+    "name": "History",
+    "statMod": "int",
+    "proficiency": "not",
+    "modifier": 2
+  },
+  "insight": {
+    "name": "Insight",
+    "statMod": "wis",
+    "proficiency": "not",
+    "modifier": 2
+  },
+  "intimidation": {
+    "name": "Intimidation",
+    "statMod": "cha",
+    "proficiency": "not",
+    "modifier": 0
+  },
+  "investigation": {
+    "name": "Investigation",
+    "statMod": "int",
+    "proficiency": "not",
+    "modifier": 0
+  },
+  "medicine": {
+    "name": "Medicine",
+    "statMod": "wis",
+    "proficiency": "not",
+    "modifier": 0
+  },
+  "nature": {
+    "name": "Nature",
+    "statMod": "int",
+    "proficiency": "not",
+    "modifier": 0
+  },
+  "perception": {
+    "name": "Perception",
+    "statMod": "wis",
+    "proficiency": "not",
+    "modifier": 0
+  },
+  "performance": {
+    "name": "Performance",
+    "statMod": "cha",
+    "proficiency": "not",
+    "modifier": 0
+  },
+  "persuasion": {
+    "name": "Persuasion",
+    "statMod": "cha",
+    "proficiency": "not",
+    "modifier": -2
+  },
+  "religion": {
+    "name": "Religion",
+    "statMod": "int",
+    "proficiency": "not",
+    "modifier": 0
+  },
+  "sleightOfHand": {
+    "name": "Sleight of Hand",
+    "statMod": "dex",
+    "proficiency": "proficient",
+    "modifier": 0
+  },
+  "stealth": {
+    "name": "Stealth",
+    "statMod": "dex",
+    "proficiency": "expertise",
+    "modifier": 0
+  },
+  "survival": {
+    "name": "Survival",
+    "statMod": "wis",
+    "proficiency": "not",
+    "modifier": 0
+  }
 }

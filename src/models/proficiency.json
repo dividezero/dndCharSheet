@@ -1,5 +1,5 @@
 {
-  "not": { "name": "Not proficient", "color": "neutral" },
+  "not": { "name": "Not proficient" },
   "half": { "name": "Half proficiency", "color": "yellow" },
   "proficient": { "name": "Proficient", "color": "green" },
   "expertise": { "name": "Expertise", "color": "blue" }

@@ -1,20 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {  Text, Heading } from 'evergreen-ui';
-import Card from '../Card';
 import { getModifier, formatModifier } from '../../utils';
+import StatCard from '../StatCard';
 
 import './AbilityScoreCard.css';
 
 // Declare a component that returns an HTML button with the given properties
 const AbilityScoreCard = ({ name, value }) => {
   return (
-    <Card cellWidth={1} cellHeight={1}>
-      <Text>{name}</Text>
-      <Heading size={900}>{formatModifier(getModifier(value))}</Heading>
-      <Text>{value}</Text>
-    </Card>
+    <StatCard
+      topText={name}
+      bottomText={value}
+      value={formatModifier(getModifier(value))}
+    />
   );
 };
 

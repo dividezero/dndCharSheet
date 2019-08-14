@@ -7,7 +7,7 @@ import { formatModifier } from '../../utils';
 // Declare a component that returns an HTML button with the given properties
 const Modifier = props => {
   const { children } = props;
-  return <Strong>{formatModifier(children)}</Strong>;
+  return <Strong float="right">{formatModifier(children)}</Strong>;
 };
 
 Modifier.description = `
