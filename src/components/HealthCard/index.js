@@ -11,7 +11,7 @@ import './HealthCard.css';
 const HealthPane = ({ text, amount }) => (
   <Pane marginRight={cellMargin}>
     <Text>{text}</Text>
-    <Heading>{amount}</Heading>
+    <Heading size={700}>{amount}</Heading>
   </Pane>
 );
 HealthPane.propTypes = {
@@ -27,7 +27,7 @@ const HealthCard = ({ current, max, temp, onHeal, onDamage }) => {
       cellWidth={3}
       cellHeight={1}
       isRowDirection
-      justifyContent="flex-start"
+      justifyContent="space-around"
     >
       <Pane
         display="flex"
@@ -37,6 +37,7 @@ const HealthCard = ({ current, max, temp, onHeal, onDamage }) => {
       >
         <Button
           intent="success"
+          appearance="minimal"
           onClick={() => {
             onHeal(amount);
           }}
@@ -50,6 +51,7 @@ const HealthCard = ({ current, max, temp, onHeal, onDamage }) => {
         />
         <Button
           intent="danger"
+          appearance="minimal"
           onClick={() => {
             onDamage(amount);
           }}
@@ -58,8 +60,8 @@ const HealthCard = ({ current, max, temp, onHeal, onDamage }) => {
         </Button>
       </Pane>
       <Pane display="flex" flexDirection="column">
-          <Heading>Hit Points</Heading>
-          <Pane display="flex" flexDirection="row">
+        <Heading>Hit Points</Heading>
+        <Pane display="flex" flexDirection="row" justifyItems="flex-end">
           <HealthPane text="Current" amount={current} />
           <HealthPane text="Max" amount={max} />
           <HealthPane text="Temp" amount={temp} />

@@ -5,8 +5,13 @@ import { Pane } from 'evergreen-ui';
 import { cellMargin, getCardWidth } from '../../theme/layout';
 
 // Declare a component that returns an HTML button with the given properties
-const Card = props => {
-  const { cellWidth, cellHeight, isRowDirection, children } = props;
+const Card = ({
+  cellWidth,
+  cellHeight,
+  isRowDirection,
+  justifyContent,
+  children,
+}) => {
   return (
     <Pane
       elevation={1}
@@ -16,10 +21,9 @@ const Card = props => {
       margin={cellMargin}
       padding={20}
       display="flex"
-      justifyContent="center"
+      justifyContent={justifyContent || 'center'}
       alignItems="center"
       flexDirection={isRowDirection ? 'row' : 'column'}
-      {...props}
     >
       {children}
     </Pane>
@@ -35,14 +39,18 @@ Ability Score displays should display the score and roll modifiers based on the 
 Card.propTypes = {
   /** Text that will appear in the button
      This will default to 'I am a button' if not present */
-  cellWidth: PropTypes.string.isRequired,
-  cellHeight: PropTypes.number.isRequired,
+  cellWidth: PropTypes.number,
+  cellHeight: PropTypes.number,
   children: PropTypes.node.isRequired,
   isRowDirection: PropTypes.bool,
+  justifyContent: PropTypes.string,
 };
 
 // What properties the component should have when nothing is defined
 Card.defaultProps = {
+  cellWidth: 1,
+  cellHeight: undefined,
+  justifyContent: undefined,
   isRowDirection: false,
 };
 
