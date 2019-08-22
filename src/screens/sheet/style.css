@@ -1,0 +1,45 @@
+.root-container {
+  display: flex;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  width: -moz-min-content;
+  margin: 0 auto;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-container__ability-score {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary-container__left-pane {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-device-width: 650px) {
+  .main-container {
+    width: 650px;
+  }
+
+  .top-container__ability-score {
+    flex-direction: row;
+  }
+
+  .secondary-container {
+    flex-direction: row;
+  }
+}

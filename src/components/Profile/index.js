@@ -26,9 +26,9 @@ const Profile = ({ name, race, classes, image }) => {
         name={name}
         src={image}
         size={50}
-        marginRight={cellMargin}
+        marginRight={cellMargin*2}
       />
-      <Pane display="flex" flexDirection="column">
+      <Pane display="flex" flexDirection="column" textAlign="left" >
         <Text size={600}>{name}</Text>
         <Text size={300}>{race}</Text>
         <Text size={300}>{classDesc}</Text>

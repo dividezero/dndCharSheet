@@ -4,7 +4,7 @@ import { storiesOf, withInfo } from '../../../.storybook/stories';
 
 import AbilityScoreCard from './index';
 
-import stats from '../../models/stats';
+import stats from '../../stubs/stats';
 
 storiesOf('AbilityScoreCard', module)
   .addDecorator((story, context) =>

@@ -1,34 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Badge, Pane, Text, Tooltip } from 'evergreen-ui';
+import { Pane, Text } from 'evergreen-ui';
 import Card from '../Card';
 import Modifier from '../Modifier';
+import ProficiencyBadge from '../ProficiencyBadge';
 
-import './SkillsPane.css';
-import proficiencyList from '../../models/proficiency';
+import './SkillProficienciesPane.css';
 
-const SkillEntry = ({ skill }) => {
-  const { name, statMod, proficiency, modifier } = skill;
-  const badgeColor =
-    proficiencyList[proficiency] && proficiencyList[proficiency].color;
-  const profName =
-    proficiencyList[proficiency] && proficiencyList[proficiency].name;
-  return (
-    <Pane display="table-row">
-      <Text display="table-cell">
-        {badgeColor && (
-          <Tooltip content={profName}>
-            <Badge color={badgeColor}>{profName[0]}</Badge>
-          </Tooltip>
-        )}
-      </Text>
-      <Text display="table-cell">{statMod}</Text>
-      <Text display="table-cell">{name}</Text>
-      <Modifier display="table-cell">{modifier}</Modifier>
-    </Pane>
-  );
-};
+const SkillEntry = ({ skill: { name, statMod, proficiency, modifier } }) => (
+  <Pane display="table-row">
+    <ProficiencyBadge proficiency={proficiency} />
+    <Text display="table-cell">{statMod}</Text>
+    <Text display="table-cell">{name}</Text>
+    <Modifier display="table-cell">{modifier}</Modifier>
+  </Pane>
+);
 SkillEntry.propTypes = {
   skill: PropTypes.shape({
     name: PropTypes.string,
@@ -39,7 +26,7 @@ SkillEntry.propTypes = {
 };
 
 // Declare a component that returns an HTML button with the given properties
-const SkillsPane = ({ skills }) => {
+const SkillProficienciesPane = ({ skills }) => {
   const keys = Object.keys(skills);
   return (
     <Card cellWidth={3}>
@@ -54,12 +41,12 @@ const SkillsPane = ({ skills }) => {
 };
 
 // Description - appears in the storybook item
-SkillsPane.description = `
+SkillProficienciesPane.description = `
 Ability Score displays should display the score and roll modifiers based on the score
 `;
 
 // This allows for the definition of rules that each prop type has to follow in order to be used properly
-SkillsPane.propTypes = {
+SkillProficienciesPane.propTypes = {
   /** Text that will appear in the button
      This will default to 'I am a button' if not present */
   // todo theres some bug with eslint checking proptypes
@@ -67,6 +54,6 @@ SkillsPane.propTypes = {
 };
 
 // What properties the component should have when nothing is defined
-SkillsPane.defaultProps = {};
+SkillProficienciesPane.defaultProps = {};
 
-export default SkillsPane;
+export default SkillProficienciesPane;

@@ -11,6 +11,7 @@ const Card = ({
   isRowDirection,
   justifyContent,
   children,
+    background
 }) => {
   return (
     <Pane
@@ -24,6 +25,7 @@ const Card = ({
       justifyContent={justifyContent || 'center'}
       alignItems="center"
       flexDirection={isRowDirection ? 'row' : 'column'}
+      background={background}
     >
       {children}
     </Pane>
@@ -44,6 +46,7 @@ Card.propTypes = {
   children: PropTypes.node.isRequired,
   isRowDirection: PropTypes.bool,
   justifyContent: PropTypes.string,
+  background: PropTypes.string,
 };
 
 // What properties the component should have when nothing is defined
@@ -51,6 +54,7 @@ Card.defaultProps = {
   cellWidth: 1,
   cellHeight: undefined,
   justifyContent: undefined,
+  background: 'tint1',
   isRowDirection: false,
 };
 

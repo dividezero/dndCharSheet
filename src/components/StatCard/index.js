@@ -7,9 +7,9 @@ import Card from '../Card';
 import './StatCard.css';
 
 // Declare a component that returns an HTML button with the given properties
-const StatCard = ({ topText, bottomText, value }) => {
+const StatCard = ({ topText, bottomText, value, background }) => {
   return (
-    <Card cellWidth={1} cellHeight={1}>
+    <Card cellWidth={1} cellHeight={1} background={background}>
       <Text>{topText}</Text>
       <Heading size={900}>{value}</Heading>
       <Text>{bottomText}</Text>
@@ -29,12 +29,14 @@ StatCard.propTypes = {
   topText: PropTypes.string,
   value: PropTypes.string.isRequired,
   bottomText: PropTypes.string,
+  background: PropTypes.string,
 };
 
 // What properties the component should have when nothing is defined
 StatCard.defaultProps = {
   topText: '',
   bottomText: '',
+  background: undefined,
 };
 
 export default StatCard;

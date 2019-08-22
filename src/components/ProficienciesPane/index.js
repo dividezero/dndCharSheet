@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { Pane, Text, TagInput, Tooltip } from 'evergreen-ui';
+import { IconButton, Pane, Text, TagInput } from 'evergreen-ui';
 import Card from '../Card';
 
 import './ProficienciesPane.css';
 
-const ProficiencyGroup = ({ group, proficiencies, onChange }) => {
+const ProficiencyGroup = ({ group, proficiencies, disabled, onChange }) => {
   return (
     <Pane marginBottom={8}>
       <Text>{group}</Text>
       <TagInput
         width="100%"
         values={proficiencies}
+        disabled={disabled}
         onChange={onChange}
       />
     </Pane>
@@ -21,14 +22,18 @@ const ProficiencyGroup = ({ group, proficiencies, onChange }) => {
 ProficiencyGroup.propTypes = {
   group: PropTypes.string.isRequired,
   proficiencies: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
   onChange: PropTypes.func,
 };
 ProficiencyGroup.defaultProps = {
+  disabled: true,
   onChange: () => {},
 };
 
 // Declare a component that returns an HTML button with the given properties
 const ProficienciesPane = ({ proficiencyGroups, onChange }) => {
+  const [editable, setEditable] = useState(false);
+
   const changeHandler = groupName => newValues => {
     const newGroups = proficiencyGroups.map(proficiencyGroup => {
       const { group } = proficiencyGroup;
@@ -40,11 +45,27 @@ const ProficienciesPane = ({ proficiencyGroups, onChange }) => {
 
   return (
     <Card cellWidth={3}>
-      <Text padding={4}>PROFICIENCIES</Text>
+      <Pane
+        width="100%"
+        display="flex"
+        flex-direction="column"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <div />
+        <Text padding={4}>PROFICIENCIES</Text>
+        <IconButton
+          appearance="minimal"
+          icon={editable ? 'unlock' : 'lock'}
+          height={24}
+          onClick={() => setEditable(!editable)}
+        />
+      </Pane>
       <Pane display="table" width="100%">
         {proficiencyGroups.map(({ group, proficiencies }, key) => {
           return (
             <ProficiencyGroup
+              disabled={!editable}
               key={key}
               group={group}
               proficiencies={proficiencies}

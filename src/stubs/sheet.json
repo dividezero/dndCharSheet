@@ -1,0 +1,61 @@
+{
+  "name": "Dakaryn",
+  "race": {},
+  "classes": [
+    {
+      "Rogue": [
+        {
+          "level": 1,
+          "proficiencyBonus": 2,
+          "actions": {
+            "attacks": [
+              {
+                "name": "sneak attack",
+                "damage": {
+                  "type": "roll",
+                  "value": "1d6"
+                }
+              }
+            ]
+          },
+          "skills": {
+            "athletics": {
+              "proficiency": "expertise"
+            },
+            "deception": {
+              "proficiency": "expertise"
+            }
+          },
+          "features": [
+            {
+              "name": "Expertise",
+              "description": "At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with Thieves' Tools. Your Proficiency Bonus is doubled for any ability check you make that uses either of the chosen proficiencies.\n\nAt 6th level, you can choose two more of your proficiencies (in Skills or with thieves' tools) to gain this benefit."
+            },
+            {
+              "name": "Sneak Attack",
+              "description": "Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an Attack if you have advantage on the Attack roll. The Attack must use a Finesse or a ranged weapon.\n\nYou don't need advantage on the Attack roll if another enemy of the target is within 5 feet of it, that enemy isn't Incapacitated, and you don't have disadvantage on the Attack roll.\n\nThe amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table."
+            },
+            {
+              "name": "Thieves' Cant",
+              "description": "During your rogue Training you learned thieves' cant, a Secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves' cant understands such messages. It takes four times longer to convey such a Message than it does to speak the same idea plainly.\n\nIn addition, you understand a set of Secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves' guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a Safe House for thieves on the run."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "abilityScore": {
+    "str": 10,
+    "dex": 10,
+    "con": 10,
+    "int": 10,
+    "wis": 10,
+    "cha": 10
+  },
+  "proficiencies": {
+    "armor": [],
+    "weapons": [],
+    "tools": [],
+    "languages": []
+  }
+}

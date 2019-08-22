@@ -4,7 +4,6 @@ import { storiesOf, withInfo } from '../../../.storybook/stories';
 
 import ProficienciesPane from './index';
 
-import skills from '../../models/skills';
 
 storiesOf('ProficienciesPane', module)
   .addDecorator((story, context) =>

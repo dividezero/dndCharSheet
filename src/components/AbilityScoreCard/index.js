@@ -12,6 +12,7 @@ const AbilityScoreCard = ({ name, value }) => {
     <StatCard
       topText={name}
       bottomText={value}
+      background="tealTint"
       value={formatModifier(getModifier(value))}
     />
   );
