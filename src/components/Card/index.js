@@ -11,7 +11,7 @@ const Card = ({
   isRowDirection,
   justifyContent,
   children,
-    background
+  background,
 }) => {
   return (
     <Pane
@@ -26,6 +26,8 @@ const Card = ({
       alignItems="center"
       flexDirection={isRowDirection ? 'row' : 'column'}
       background={background}
+      backgroundColor={!background && 'white'}
+      borderRadius={4}
     >
       {children}
     </Pane>
@@ -54,7 +56,7 @@ Card.defaultProps = {
   cellWidth: 1,
   cellHeight: undefined,
   justifyContent: undefined,
-  background: 'tint1',
+  background: undefined,
   isRowDirection: false,
 };
 

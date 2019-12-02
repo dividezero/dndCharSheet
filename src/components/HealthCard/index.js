@@ -45,6 +45,7 @@ const HealthCard = ({ current, max, temp, onHeal, onDamage }) => {
           Heal
         </Button>
         <TextInput
+          type="number"
           placeholder="Amount..."
           onChange={e => setAmount(e.target.value)}
           width={80}

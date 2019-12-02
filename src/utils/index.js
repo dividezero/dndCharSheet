@@ -1,6 +1,7 @@
-export const getModifier = score => (score - 10) / 2;
+export const getModifier = score => Math.floor((score - 10) / 2);
 
 export const formatModifier = modifier =>
   modifier > 0 ? `+${modifier}` : modifier;
 
-export default { getModifier, formatModifier };
+export const calculateInitiative = (dexScore, format = true) =>
+  format ? formatModifier(getModifier(dexScore)) : getModifier(dexScore);
